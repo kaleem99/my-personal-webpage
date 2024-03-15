@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/kaleem99.github.io/my-personal-webpage/static/css/main.6d41ca2b.css",
+    "main.js": "/kaleem99.github.io/my-personal-webpage/static/js/main.6bf6dd3c.js",
+    "static/js/453.ecb39b89.chunk.js": "/kaleem99.github.io/my-personal-webpage/static/js/453.ecb39b89.chunk.js",
+    "static/media/Education.png": "/kaleem99.github.io/my-personal-webpage/static/media/Education.5575c95fc24561e41dc4.png",
+    "static/media/myPic.png": "/kaleem99.github.io/my-personal-webpage/static/media/myPic.f60237ad9dd5a2747a9d.png",
+    "static/media/LearningMate.png": "/kaleem99.github.io/my-personal-webpage/static/media/LearningMate.8bc1b15b19f06ad7f57f.png",
+    "static/media/2U.webp": "/kaleem99.github.io/my-personal-webpage/static/media/2U.e05c39f5341b3a475317.webp",
+    "static/media/logo.svg": "/kaleem99.github.io/my-personal-webpage/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/kaleem99.github.io/my-personal-webpage/index.html",
+    "main.6d41ca2b.css.map": "/kaleem99.github.io/my-personal-webpage/static/css/main.6d41ca2b.css.map",
+    "main.6bf6dd3c.js.map": "/kaleem99.github.io/my-personal-webpage/static/js/main.6bf6dd3c.js.map",
+    "453.ecb39b89.chunk.js.map": "/kaleem99.github.io/my-personal-webpage/static/js/453.ecb39b89.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6d41ca2b.css",
+    "static/js/main.6bf6dd3c.js"
+  ]
+}
