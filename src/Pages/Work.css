@@ -1,0 +1,93 @@
+.WorkPage {
+  width: 80%;
+  height: 80vh;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: space-between;
+}
+.workItem {
+  flex-basis: 24%;
+
+  /* flex: 0 0 auto; This ensures items don't grow or shrink */
+  width: 250px; /* Adjust as needed for the desired width and gap */
+  margin-bottom: 10px; /* Adjust for the vertical gap between rows */
+  background-color: #1e293b;
+  text-align: center;
+  padding: 20px 10px 20px 10px;
+  height: 300px;
+  /* border: 1px groove white; */
+  border-radius: 10px;
+}
+.WorkImagesItem {
+  width: 100%;
+  text-align: right;
+}
+.WorkImages {
+  width: 80px;
+}
+.WorkImages.a0 {
+  width: 100px;
+  height: 70px;
+}
+.WorkImages.a3 {
+    margin-top: 20px;
+    width: 145px;
+    height: 30px;
+  }
+.grid-container.workPage {
+  height: auto;
+  display: flex;
+}
+.SkillInnerItem {
+  width: 96%;
+  height: auto;
+  margin: auto;
+  text-align: left;
+  /* border: 1px solid; */
+}
+.workOnly {
+  margin-top: 5px;
+  font-size: 12px;
+}
+.workIcon {
+  font-size: 42px;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  color: #ec4858;
+}
+.workIcon > svg {
+  font-size: 42px;
+  width: 42px;
+  height: 42px;
+}
+.workSubheading {
+  margin-top: 20px;
+}
+.workSubheading2 {
+  margin-top: 10px;
+  margin-block-end: 0px;
+}
+.workItem:hover .WorkImagesItem > .WorkImages {
+  transform: rotateY(360deg);
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  color: white;
+}
+.workItem:hover {
+  background-color: #ec4858;
+  cursor: pointer;
+}
+.workIcon.Blur > svg {
+  transform: rotateY(360deg);
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+@media screen and (max-width: 600px) {
+  .workItem {
+    margin-top: 10px;
+    flex-basis: 100%;
+  }
+}

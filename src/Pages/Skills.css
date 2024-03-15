@@ -1,0 +1,75 @@
+.SkillsPage {
+  width: 80%;
+  height: 80vh;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: space-between;
+}
+.skillsItem {
+  flex-basis: 24%;
+
+  /* flex: 0 0 auto; This ensures items don't grow or shrink */
+  width: 250px; /* Adjust as needed for the desired width and gap */
+  margin-bottom: 10px; /* Adjust for the vertical gap between rows */
+  background-color: #1e293b;
+  text-align: center;
+  padding: 20px 10px 20px 10px;
+  height: 280px;
+  /* border: 1px groove white; */
+  border-radius: 10px;
+}
+
+.grid-container.skillsPage {
+  height: auto;
+  display: flex;
+}
+.SkillInnerItem {
+  width: 96%;
+  height: auto;
+  margin: auto;
+  text-align: left;
+  /* border: 1px solid; */
+}
+.skillsOnly {
+  margin-top: 20px;
+  font-size: 12px;
+}
+.SkillsIcon {
+  font-size: 42px;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  color: #ec4858;
+}
+.SkillsIcon > svg {
+  font-size: 42px;
+  width: 42px;
+  height: 42px;
+}
+.SkillsSubheading {
+  margin-top: 20px;
+}
+
+.skillsItem:hover .SkillsIcon > svg {
+  transform: rotateY(360deg);
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  color: white;
+}
+.skillsItem:hover {
+  background-color: #ec4858;
+  cursor: pointer;
+}
+.SkillsIcon.Blur > svg {
+  transform: rotateY(360deg);
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+@media screen and (max-width: 600px) {
+    .skillsItem {
+        margin-top: 10px;
+        flex-basis: 100%;
+    }
+}

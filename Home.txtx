@@ -1,0 +1,39 @@
+  <div className="grid-item1">
+        <div className="textString">
+          <animated.h1
+            style={{
+              display: "inline-block",
+              overflow: "hidden",
+              whiteSpace: "nowrap",
+              width,
+              color,
+            }}
+          >
+            Kaleem Mohammad
+          </animated.h1>
+          {/* <h1 className="H1">Kaleem Mohammad</h1> */}
+          <p>
+            A hardworking individual eager to learn more and showcase my
+            experience and knowledge with 2 years of experience as a Software
+            Developer. Ready to face new challenges and explore diverse
+            technologies while collaborating with other IT professionals. I have
+            worked with frontend technologies such as HTML5, CSS, PHP,
+            JavaScript, and React, as well as backend technologies including
+            ExpressJS, NodeJS, and PostgreSQL. Additionally, I am proficient in
+            using tools and languages like Git, Github, Jasmine, Storybook,
+            Postman, Docker, and C Programming.
+          </p>
+          <p>
+            I have experience in modifying and maintaining an open-source
+            learning platform called Tilde, including reviewing code and
+            collaborating with both frontend and backend developers in an Agile
+            environment. I also have a track record of maintaining existing
+            applications and contributing to the development of new
+            applications.
+          </p>
+        </div>
+        <img src={image} alt="" className="kaleem" />
+      </div>
+
+
+                   

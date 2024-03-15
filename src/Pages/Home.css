@@ -1,0 +1,52 @@
+.kaleem {
+  width: 250px;
+  height: 300px;
+  margin: auto;
+}
+
+.grid-container {
+  width: 100%;
+  height: auto;
+  margin: 0px 0px 0px auto;
+  background-color: #171a21;
+  background-image: url("../assets/images/always-grey.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid-item1 {
+  width: 90%;
+  /* display: flex; */
+  margin: auto;
+}
+.textString {
+  width: 70%;
+  text-align: left;
+  padding: 5px;
+  font-size: 20px;
+}
+.H1 {
+  font-size: 32px;
+}
+.HomeBackground {
+  background-color: none;
+}
+@media screen and (max-width: 620px) {
+  .grid-container {
+    height: auto;
+    padding-bottom: 20px;
+  }
+  .grid-item1 {
+    flex-direction: column;
+  }
+  .textString {
+    width: 100%;
+    font-size: 12px;
+  }
+  .App {
+    height: 1200px;
+  }
+  .kaleem {
+    margin-top: 30px;
+  }
+}

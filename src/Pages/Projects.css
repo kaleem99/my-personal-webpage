@@ -1,0 +1,103 @@
+.ProjectsPage {
+  width: 80%;
+  height: 80vh;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: space-between;
+  text-align: left;
+}
+.ProjectsItem {
+  flex-basis: 24%;
+
+  /* flex: 0 0 auto; This ensures items don't grow or shrink */
+  width: 250px; /* Adjust as needed for the desired width and gap */
+  margin-bottom: 10px; /* Adjust for the vertical gap between rows */
+  background-color: #1e293b;
+  text-align: left;
+  padding: 20px;
+  height: 300px;
+  /* border: 1px groove white; */
+  border-radius: 10px;
+}
+.ProjectsImagesItem {
+  width: 100%;
+  text-align: right;
+}
+.ProjectsImages {
+  width: 80px;
+}
+.ProjectsImages.a0 {
+  width: 100px;
+  height: 70px;
+}
+.ProjectsImages.a3 {
+  margin-top: 20px;
+  width: 145px;
+  height: 30px;
+}
+.grid-container.ProjectsPage {
+  height: auto;
+  display: flex;
+}
+.SkillInnerItem {
+  width: 96%;
+  height: auto;
+  margin: auto;
+  text-align: left;
+  /* border: 1px solid; */
+}
+.ProjectsOnly {
+  margin-top: 5px;
+  font-size: 12px;
+}
+.ProjectsIcon {
+  width: 35px;
+  font-size: 35px;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  color: #ec4858;
+}
+
+.ProjectsIcon > svg {
+  font-size: 25px;
+  width: 25px;
+  height: 25px;
+}
+.ProjectsSubheading {
+  /* margin-top: 20px; */
+  margin-left: 10px;
+}
+.ProjectsSubheading2 {
+  margin-top: 10px;
+  margin-block-end: 0px;
+  text-decoration: underline;
+}
+.ProjectsItem:hover .ProjectsIcon {
+  transform: rotateY(360deg);
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  color: white;
+}
+.ProjectsItem:hover {
+  background-color: #ec4858;
+  cursor: pointer;
+}
+.ProjectsIcon.Blur > svg {
+  transform: rotateY(360deg);
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.ProjectsIconAndName {
+  display: flex;
+  text-align: center;
+  /* border: 1px solid white; */
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  .ProjectsItem {
+    margin-top: 10px;
+    flex-basis: 100%;
+  }
+}
