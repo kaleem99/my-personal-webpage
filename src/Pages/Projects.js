@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./Projects.css";
-import { GoRepo } from "react-icons/go";
-
+import AllProjects from "../Components/AllProjects";
+import SpecialProjects from "../Components/SpecialProjects";
+const options = ["All Github Projects", "Special Projects"];
 const Projects = () => {
   console.log(process.env.REACT_APP_GITHUB_BEARER_TOKEN);
   const BearerToken = process.env.REACT_APP_GITHUB_BEARER_TOKEN;
   const perPage = 100; // Maximum number of repositories per page
   const page = 1;
   const [state, setState] = useState([]);
+  const [type, setType] = useState(options[0]);
   useEffect(() => {
     const fetchRepos = async () => {
       try {
@@ -33,40 +35,28 @@ const Projects = () => {
 
     fetchRepos();
   }, []);
-
+  const renderprojectTypes = () => {
+    switch (type) {
+      case options[0]:
+        return <AllProjects state={state} />;
+      case options[1]:
+        return <SpecialProjects />;
+      default:
+        return <AllProjects state={state} />;
+    }
+  };
   return (
     <div className="grid-container projectsPage">
-      <div className="ProjectsPage">
-        {state
-          .filter((repo) => repo.language != null)
-          .map((data, i) => (
-            <div className="ProjectsItem">
-              <div className="ProjectsInnerItem">
-                <div className="ProjectsIconAndName">
-                  <p className="ProjectsIcon">
-                    <GoRepo />
-                  </p>
-                  <h2 className="ProjectsSubheading">{data.name}</h2>
-                </div>
-                <br></br>
-                <a
-                  target="_blank"
-                  href={data.html_url}
-                  className="ProjectsSubheading2"
-                  rel="noreferrer"
-                >
-                  Github URL Link
-                </a>
-                <p>Private: {data.private.toString()}</p>
-                <p>Github Pages: {data.has_pages.toString()}</p>
-                <p>Languages: {data.language}</p>
-
-                <div className="ProjectsOnly">
-                  {/* <ReadMore text={data.information} maxLength={50} /> */}
-                </div>
-              </div>
-            </div>
+      <div>
+        <select
+          onChange={(e) => setType(e.target.value)}
+          className="SelectFilter"
+        >
+          {options.map((val) => (
+            <option value={val}>{val}</option>
           ))}
+        </select>
+        <div>{renderprojectTypes()}</div>
       </div>
     </div>
   );

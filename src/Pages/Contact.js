@@ -1,5 +1,10 @@
 import "./Contact.css";
+import { useForm, ValidationError } from "@formspree/react";
 const Contact = () => {
+  const [state, handleSubmit] = useForm("mdoqdqjy");
+  if (state.succeeded) {
+    return <p>Thanks for joining!</p>;
+  }
   return (
     <div className="grid-container Contact gx mb ua yg cyo">
       <div class="ab arj aso auv chf cpz dde ddn w-6/12">
@@ -89,7 +94,11 @@ const Contact = () => {
       </div>
 
       <div class="w-6/12 mx-auto rounded p-3">
-        <form action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20">
+        <form
+          action="https://formspree.io/f/mdoqdqjy"
+          method="POST"
+          class="mx-auto mt-16 max-w-xl sm:mt-20"
+        >
           <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
             <div>
               <label
@@ -222,7 +231,7 @@ const Contact = () => {
             <div class="flex gap-x-4 sm:col-span-2">
               <div class="flex h-6 items-center">
                 {/* <!-- Enabled: "bg-indigo-600", Not Enabled: "bg-gray-200" --> */}
-                <button
+                {/* <button
                   type="button"
                   class="bg-gray-200 flex w-8 flex-none cursor-pointer rounded-full p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   role="switch"
@@ -230,12 +239,16 @@ const Contact = () => {
                   aria-labelledby="switch-1-label"
                 >
                   <span class="sr-only">Agree to policies</span>
-                  {/* <!-- Enabled: "translate-x-3.5", Not Enabled: "translate-x-0" --> */}
                   <span
                     aria-hidden="true"
                     class="translate-x-0 h-4 w-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out"
                   ></span>
-                </button>
+                </button> */}
+                <ValidationError
+                  prefix="Email"
+                  field="email"
+                  errors={state.errors}
+                />
               </div>
               <label
                 class="text-sm leading-6 text-white-600"
@@ -252,6 +265,7 @@ const Contact = () => {
           <div class="mt-10">
             <button
               type="submit"
+              disabled={state.submitting}
               class="block w-full rounded-md bg-CustomSecondaryColor px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               Let's talk

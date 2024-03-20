@@ -14,7 +14,7 @@
   /* flex: 0 0 auto; This ensures items don't grow or shrink */
   width: 250px; /* Adjust as needed for the desired width and gap */
   margin-bottom: 10px; /* Adjust for the vertical gap between rows */
-  background-color: #1e293b;
+  background-color: #23263A;
   text-align: left;
   padding: 20px;
   height: 300px;
@@ -68,6 +68,7 @@
 .ProjectsSubheading {
   /* margin-top: 20px; */
   margin-left: 10px;
+  text-align: left;
 }
 .ProjectsSubheading2 {
   margin-top: 10px;
@@ -93,6 +94,7 @@
   display: flex;
   text-align: center;
   /* border: 1px solid white; */
+  height: 50px;
   align-items: center;
 }
 @media screen and (max-width: 600px) {
@@ -100,4 +102,12 @@
     margin-top: 10px;
     flex-basis: 100%;
   }
+}
+
+.SelectFilter{
+  background-color: #23263A;
+  width: 200px;
+  height: 35px;
+  margin: 20px;
+  border-radius: 5px;
 }
