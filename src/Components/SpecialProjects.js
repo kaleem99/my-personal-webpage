@@ -24,7 +24,7 @@ const data = [
 ];
 const SpecialProjects = () => {
   return (
-    <div className="ProjectsPage" style={{ width: "100%" }}>
+    <div className="ProjectsPage" style={{ width: "90%" }}>
       {data.map((data, i) => (
         <div className="ProjectsItem">
           <div className="ProjectsInnerItem">

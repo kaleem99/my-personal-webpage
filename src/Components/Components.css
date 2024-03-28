@@ -1,7 +1,7 @@
 .NavBar {
   width: 100%;
   height: 80px;
-  background-color: #1F2235;
+  background-color: #1f2235;
   /* top: 5vh;
   left: 0;
   right: 0; */
@@ -114,6 +114,44 @@
 
 @media screen and (max-width: 420px) {
   .navA {
-    font-size: small;
+    font-size: large;
+  }
+}
+@media screen and (max-width: 768px) {
+  .NavBar {
+    height: auto; /* Allow the Navbar to adjust its height based on content */
+    flex-direction: column; /* Stack items vertically for smaller screens */
+    padding: 10px; /* Add padding for better spacing */
+    font-size: large;
+    border-bottom: none;
+  }
+  .NavBar.close{
+    height: 50px;
+  }
+
+  .navItem {
+    margin-right: 0; /* Remove margin between nav items */
+    /* margin-bottom: 10px; Add margin below each nav item */
+    width: 100%; /* Set nav items to full width */
+    text-align: center; /* Center text for smaller screens */
+    font-size: large;
+    height: 35px;
+  }
+  .menuToggle {
+    align-items: end;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    font-size: larger;
+  }
+  .navA.Portfolio {
+    left: 0px;
+  }
+  .navItem > .active {
+    background-color: #ec4858;
+    color: white;
+    width: 100vw;
+    display: block;
   }
 }

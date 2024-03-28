@@ -98,9 +98,20 @@
   align-items: center;
 }
 @media screen and (max-width: 600px) {
+  .ProjectsPage{
+    width: 90%;
+    height: calc(100vh - 60px);
+    /* padding-bottom: 50px; */
+  }
   .ProjectsItem {
     margin-top: 10px;
     flex-basis: 100%;
+    width: 100%;
+  }
+  .ProjectsPageInnerDiv{
+    margin-top: 70px;
+    padding-bottom: 50px;
+    height: calc(100vh - 60px);
   }
 }
 

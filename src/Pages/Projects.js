@@ -47,7 +47,7 @@ const Projects = () => {
   };
   return (
     <div className="grid-container projectsPage">
-      <div>
+      <div className="ProjectsPageInnerDiv">
         <select
           onChange={(e) => setType(e.target.value)}
           className="SelectFilter"
