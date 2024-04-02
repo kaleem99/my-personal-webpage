@@ -125,8 +125,16 @@
     font-size: large;
     border-bottom: none;
   }
-  .NavBar.close{
+  .NavBar.close {
     height: 50px;
+  }
+  .NavBar.open {
+    height: 100vh;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .NavBar.open > .menuItems {
+    margin-top: 50px;
   }
 
   .navItem {
@@ -135,7 +143,12 @@
     width: 100%; /* Set nav items to full width */
     text-align: center; /* Center text for smaller screens */
     font-size: large;
-    height: 35px;
+    height: 40px;
+    margin-top: 15px;
+  }
+  .navItem > a {
+    height: 40px;
+    font-size: 25px;
   }
   .menuToggle {
     align-items: end;

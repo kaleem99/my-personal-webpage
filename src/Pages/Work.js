@@ -22,7 +22,7 @@ const Work = () => {
   };
   return (
     <div className="grid-container workPage">
-      <div>
+      <div className="work-innerDiv">
         <select
           onChange={(e) => setType(e.target.value)}
           className="SelectFilter"

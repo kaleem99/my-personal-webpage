@@ -13,7 +13,7 @@
   /* flex: 0 0 auto; This ensures items don't grow or shrink */
   width: 250px; /* Adjust as needed for the desired width and gap */
   margin-bottom: 10px; /* Adjust for the vertical gap between rows */
-  background-color: #23263A;
+  background-color: #23263a;
   text-align: center;
   padding: 20px 10px 20px 10px;
   height: 300px;
@@ -32,10 +32,10 @@
   height: 70px;
 }
 .WorkImages.a3 {
-    margin-top: 20px;
-    width: 145px;
-    height: 30px;
-  }
+  margin-top: 20px;
+  width: 145px;
+  height: 30px;
+}
 .grid-container.workPage {
   height: auto;
   /* display: flex; */
@@ -87,11 +87,13 @@
 
 @media screen and (max-width: 600px) {
   .workItem {
-    margin-top: 10px;
-    flex-basis: 100%;
+    flex-basis: 90%;
+    margin: 10px auto;
+  }
+  .work-innerDiv {
+    margin-top: 70px;
   }
 }
-
 
 /* Google spreadsheets Api Key: AIzaSyAb_T9CzdJe_HGi8Rhznso08xpJHqiz584 */
 /* Client ID: 35396218725-7i7v5kjo14r54n8irl92se28be3gr7p0.apps.googleusercontent.com */
