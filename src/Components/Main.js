@@ -5,12 +5,28 @@ import Work from "../Pages/Work";
 import Projects from "../Pages/Projects";
 import Contact from "../Pages/Contact";
 import Skills from "../Pages/Skills";
-const Main = () => {
+const Main = ({ state, setState }) => {
+  const checkState = () => {
+    switch (state) {
+      case "Home":
+        return <Home />;
+      case "Skills":
+        return <Skills />;
+      case "Work":
+        return <Work />;
+      case "Projects":
+        return <Projects />;
+      case "contact":
+        return <Contact />;
+      default:
+        return <Home />;
+    }
+  };
   return (
     <Router>
-      <NavBar />
+      <NavBar setState={setState} state={state} />
       <div className="Main">
-        <Routes>
+        {/* <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Home" element={<Home />} />
 
@@ -18,7 +34,8 @@ const Main = () => {
           <Route path="/work" element={<Work />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
-        </Routes>
+        </Routes> */}
+        {checkState()}
       </div>
     </Router>
   );

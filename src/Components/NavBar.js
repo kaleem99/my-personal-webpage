@@ -4,7 +4,7 @@ import "./Components.css";
 import { Link, useLocation } from "react-router-dom"; // Import Link and useLocation from react-router-dom
 import { FaShapes, FaBars, FaTimes } from "react-icons/fa";
 
-const NavBar = () => {
+const NavBar = ({ state, setState }) => {
   const location = useLocation().pathname;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -31,7 +31,10 @@ const NavBar = () => {
           <p>
             <FaShapes />
           </p>
-          <p>{"\t"}Portfolio</p>
+          <p>
+            {"\t"}
+            {state === "" ? "Home" : state}
+          </p>
         </div>
         <div className="menuToggle" onClick={toggleMenu}>
           {isMenuOpen ? <FaTimes /> : <FaBars />}
@@ -41,7 +44,11 @@ const NavBar = () => {
             {NavSections.map((nav) => (
               <div className="navItem" key={nav}>
                 <a
-                  href={nav}
+                  // href={nav}
+                  onClick={() => {
+                    setState(nav);
+                    setIsMenuOpen(false);
+                  }}
                   className={
                     location.slice(1) === nav ||
                     (location === "/" && nav === "Home")
